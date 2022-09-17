@@ -1,4 +1,4 @@
-const Key = "html/new";
+const Key = "pink";
 const del = require("del");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass")(require("sass"));
@@ -67,8 +67,7 @@ const end = () => {
   src(Key + "/src/css/*.css")
     .pipe(cleanCSS())
     .pipe(dest(Key + "/dist/src/css"));
-  src(Key + "/src/img/**/*.webp")
-    .pipe(dest(Key + "/dist/src/img"));
+  src(Key + "/src/img/**/*.webp").pipe(dest(Key + "/dist/src/img"));
   src(Key + "/src/icon/*.{png,svg}")
     .pipe(
       imagemin([
@@ -81,8 +80,7 @@ const end = () => {
   src(Key + "/src/js/*.js")
     .pipe(terser())
     .pipe(dest(Key + "/dist/src/js"));
-  return src(Key + "/src/font/*.ttf")
-    .pipe(dest(Key + "/dist/src/font"));
+  return src(Key + "/src/font/*.ttf").pipe(dest(Key + "/dist/src/font"));
 };
 
 // Live
@@ -108,8 +106,11 @@ exports.svg = svg;
 exports.js = js;
 exports.end = end;
 exports.live = live;
-exports.run = series(parallel(css, img, svg, js), () => {
-  return del(Key + "/dist");
-}, end);
+exports.run = series(
+  parallel(css, img, svg, js),
+  () => {
+    return del(Key + "/dist");
+  },
+  end
+);
 exports.default = parallel(css, js, live);
-

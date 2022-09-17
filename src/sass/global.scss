@@ -1,14 +1,18 @@
-.page__body {
-  min-height: 100vh;
-  color: $basic-black;
-  background-color: $basic-white;
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  &::before {
-    content: url(../icon/sprite.svg);
-  }
+.page__body {
+  min-width: 320px;
+  color: $basic-dark;
+  background-color: $basic-white;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 img {
@@ -31,25 +35,126 @@ img {
 }
 
 .container {
+  width: 320px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: 660px) {
+    width: 660px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 130px;
+    width: 1200px;
+  }
 }
 
 .button {
   display: inline-block;
-  padding: 5px;
-  color: inherit;
+  padding: 10px 29px;
+  color: $basic-white;
   background-color: transparent;
-  border: none;
-  font: inherit;
+  border-radius: 30px;
+  border: 3px solid currentColor;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
   text-decoration: none;
+  cursor: pointer;
+
+  &--download {
+    font-size: 21px;
+    height: 56px;
+
+    &:hover {
+      color: $basic-red;
+      background-color: $basic-white;
+      border-color: $basic-white;
+    }
+
+    &:active {
+      color: rgba($basic-red, 0.3);
+    }
+  }
+
+  &--sublime {
+    height: 59px;
+    min-width: 296px;
+    background-color: $basic-green;
+    border: 2px solid transparent;
+    border-radius: 1px;
+    line-height: 30px;
+
+    &:hover {
+      background-color: $basic-green-hover;
+    }
+
+    &:disabled {
+      background-color: $basic-grey;
+    }
+  }
+
+  &--post {
+    min-width: 280px;
+    height: 55px;
+    color: $basic-red;
+
+    &:hover {
+      color: $basic-white;
+      background-color: $basic-red;
+      border-color: $basic-red;
+    }
+  }
+
+  &--cancel {
+    min-width: 280px;
+    height: 55px;
+    color: $basic-dark;
+    opacity: 0.1;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: $basic-white;
+      background-color: $basic-dark;
+      border-color: $basic-dark;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    color: rgba($basic-white, 0.3);
+  }
 }
 
 .input {
   display: inline-block;
-  padding: 5px;
-  font: inherit;
+  padding: 12.5px 20px;
+  color: $basic-dark;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid $basic-grey;
+  border-radius: 1px;
 
   &::placeholder {
     color: currentColor;
+  }
+
+  &:hover {
+    border-color: $basic-dark;
+  }
+
+  &:active {
+    border-color: $basic-red;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

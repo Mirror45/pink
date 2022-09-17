@@ -1,6 +1,6 @@
 {
-  "name": "new",
-  "version": "2.0.0",
+  "name": "pink",
+  "version": "1.0.0",
   "description": "Шаблон",
   "main": "gulpfile.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mirror45/new.git"
+    "url": "git+https://github.com/Mirror45/pink.git"
   },
   "author": "Mirror",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mirror45/new/issues"
+    "url": "https://github.com/Mirror45/pink/issues"
   },
-  "homepage": "https://github.com/Mirror45/new#readme",
+  "homepage": "https://github.com/Mirror45/pink#readme",
   "dependencies": {
     "browser-sync": "^2.27.10",
     "del": "^6.1.1",
