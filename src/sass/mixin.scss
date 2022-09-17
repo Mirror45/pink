@@ -1,0 +1,54 @@
+// @include list
+
+@mixin list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin center ($e: center) {
+  position: absolute;
+  @if ($e == center) {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @if ($e == x) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if ($e == y) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin trigon ($w: 100px, $e: top, $c: black) {
+  width: 0;
+  height: 0;
+  border-width: $w;
+  border-color: transparent;
+  border-style: solid;
+  @if ($e == top) {
+    border-top: none;
+    border-bottom-color: $c;
+  }
+  @if ($e == bottom) {
+    border-bottom: none;
+    border-top-color: $c;
+  }
+  @if ($e == left) {
+    border-left: none;
+    border-right-color: $c;
+  }
+  @if ($e == right) {
+    border-right: none;
+    border-left-color: $c;
+  }
+}
+
+@mixin img ($u) {
+  background-image: url(".." + str-slice($u, 12, -2));
+}

@@ -1,0 +1,6 @@
+style.css
+script.js
+img.svg
+img/*.{png,jpg}
+*.map
+
