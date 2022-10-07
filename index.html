@@ -18,7 +18,34 @@
   </head>
   <body class="page__body">
     <!-- svg>use[href="src/icon/img.svg#name"] -->
-    <header class="main-header"></header>
+    <header class="main-header">
+      <nav class="main-nav main-nav--disabled">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <div class="main-nav__logo container">
+              <svg width="74" height="23">
+                <use href="src/icon/img.svg#pink"></use>
+              </svg>
+              <svg width="23" height="23">
+                <use href="src/icon/img.svg#close"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link container">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link container">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link container">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link container">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main class="page__main"></main>
     <footer class="main-footer"></footer>
     <script src="src/js/script.js"></script>
