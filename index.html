@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body class="page__body">
-    <!-- svg>use[href="src/icon/img.svg#name"] -->
+    <!-- svg["width=""height=""]>use[href="src/icon/img.svg#name] -->
     <header class="main-header">
-      <nav class="main-nav">
+      <nav class="main-nav container main-nav--disabled">
         <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <div class="main-nav__logo container">
+          <li class="main-nav__item main-nav__logo">
+            <div class="container">
               <svg width="74" height="23">
-                <use href="src/icon/img.svg#pink"></use>
+                <use href="src/icon/img.svg#pink-mobile"></use>
               </svg>
               <svg width="23" height="23">
                 <use href="src/icon/img.svg#close"></use>
@@ -32,28 +32,54 @@
             </div>
           </li>
           <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link container">Главная</a>
+            <a href="index.html" class="main-nav__link">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link container">Фотографии</a>
+            <a href="" class="main-nav__link">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link container">Конкурс</a>
+            <a href="" class="main-nav__link">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link container">HTML Academy</a>
+            <a href="" class="main-nav__link">HTML Academy</a>
           </li>
         </ul>
-      </nav>
 
-      <section class="promo container">
-        <h2 class="prompo__title">Взгляните на жизнь иначе!</h2>
-        <div>
-          <button class="promo__button button button--downoload">
-            Скачать приложение
-          </button>
-        </div>
-      </section>
+        <section class="promo container">
+          <div class="promo__wrapper">
+            <h2 class="promo__title">Взгляните на жизнь иначе!</h2>
+            <button class="promo__button button button--downoload">
+              Скачать приложение
+            </button>
+            <ul class="promo__list">
+              <li class="promo__item">
+                <a href="">
+                  <svg width="47" height="56">
+                    <use href="src/icon/img.svg#apple-logo"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="promo__item">
+                <a href="">
+                  <svg width="43" height="47">
+                    <use href="src/icon/img.svg#android-logo"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="promo__item">
+                <a href="">
+                  <svg width="44" height="41">
+                    <use href="src/icon/img.svg#microsoft-logo"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <p class="promo__description">
+              Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+            </p>
+          </div>
+        </section>
+      </nav>
     </header>
     <main class="page__main"></main>
     <footer class="main-footer"></footer>

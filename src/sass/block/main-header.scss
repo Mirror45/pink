@@ -3,10 +3,12 @@
   background-color: $basic-dark;
   background-repeat: no-repeat;
   background-size: cover 462px;
-  background-position: 0 0;
+  background-position: 0 -69px;
 
   @media (min-width: 660px) {
     background-image: url(../img/main-footer/back-tablet.webp);
+    background-size: cover;
+    background-position: 0 -110px;
   }
 
   @media (min-width: 1200px) {
@@ -15,18 +17,57 @@
 }
 
 .main-nav {
-  position: absolute;
-  top: 0;
+  position: relative;
+  padding: 0;
   background-color: $basic-dark;
 
+  @media (min-width: 1200px) {
+    background-image: url(../img/main-footer/back-desktop.webp);
+  }
+
   &--disabled {
-    background-color: rgba($basic-black, 0.3);
+    .main-nav__list {
+      position: absolute;
+      top: 0;
+      background-color: rgba($basic-black, 0.3);
+    }
 
     .main-nav__item {
-      box-shadow: none;
+      &::before {
+        display: none;
+      }
 
       &:not(:first-child) {
         display: none;
+
+        @media (min-width: 1200px) {
+          display: block;
+        }
+      }
+    }
+
+    .main-nav__logo {
+      min-height: 66px;
+
+      svg:last-child {
+        width: 50px;
+        height: 24px;
+      }
+
+      @media (min-width: 660px) {
+        min-height: 110px;
+      }
+    }
+
+    .promo {
+      background-position: 0 0;
+    }
+
+    .promo__title {
+      padding-top: 95px;
+
+      @media (min-width: 660px) {
+        padding-top: 212px;
       }
     }
   }
@@ -36,20 +77,74 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: 1200px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 130px;
+    background-color: rgba($basic-black, 0.3);
+  }
 }
 
 .main-nav__item {
   position: relative;
   padding: 0;
-  height: 69px;
-  box-shadow: 0 1px 0 $basic-black, inset 0 1px 0 rgba($basic-white, 0.15);
+  height: 63px;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    box-shadow: 0 1px 0 $basic-black, inset 0 1px 0 rgba($basic-white, 0.15);
+  }
+
+  @media (min-width: 1200px) {
+    min-height: 110px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .main-nav__logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 69px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: 660px) {
+    min-height: 110px;
+
+    svg:first-child {
+      width: 145px;
+      height: 40px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    svg {
+      &:first-child {
+        width: 147px;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+
+    .container {
+      width: auto;
+      padding: 0;
+    }
+  }
 }
 
 .main-nav__link {
@@ -63,21 +158,85 @@
   line-height: 32px;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: 1200px) {
+    font-weight: 400;
+  }
 }
 
-.prompo__title {
+.promo {
+  color: $basic-white;
+  text-align: center;
+}
+
+.promo__wrapper {
+  max-width: 300px;
+}
+
+.promo__title {
   margin: 0;
   padding: 0;
-  padding-top: 95px;
+  padding-top: 29px;
   padding-bottom: 320px;
   font-weight: 300;
   font-size: 24px;
-  line-height: 23.5px;
+  line-height: 120%;
   text-align: center;
   color: $basic-white;
+
+  @media (min-width: 660px) {
+    padding-top: 102px;
+    padding-bottom: 39px;
+    font-size: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 114px;
+    padding-bottom: 51px;
+    font-size: 50px;
+  }
 }
 
 .promo__button {
+  min-width: 100%;
   margin-top: 28px;
   margin-bottom: 32px;
+
+  @media (min-width: 660px) {
+    margin: 0;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: 660px) {
+    margin-bottom: 67px;
+  }
+}
+
+.promo__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promo__description {
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+  padding-bottom: 38px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+
+  @media (min-width: 660px) {
+    padding-top: 38px;
+    padding-bottom: 119px;
+    font-size: 18px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 58px;
+  }
 }
