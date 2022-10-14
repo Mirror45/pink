@@ -93,62 +93,79 @@
     <main class="page__main">
       <h1 class="visually-hidden">Главная Pink</h1>
       <section class="info container">
-        <h2 class="info__title">
+        <h2 class="info__title container">
           Устали от серости мегаполиса?
           <span class="info__title-wrapper">Нам есть, что вам предложить!</span>
         </h2>
-        <ul class="info__list">
+        <ul class="info__list container">
           <li class="info__item">
-            <img
-              src=""
-              alt="Телефон"
-              class="info__img"
-              width="157"
-              height="320"
-            />
-            <h3 class="info__title">Поднимает настроение</h3>
+            <div class="info__picture">
+              <img
+                src="src/img/info/screen-desktop-1.webp"
+                alt="Телефон"
+                class="info__img"
+                width="157"
+                height="320"
+              />
+            </div>
+            <h3 class="info__tagline">Поднимает настроение</h3>
             <p class="info__text">
               Приложение позволит вам победить осеннюю хандру и депрессию
               буквально в несколько кликов!
             </p>
           </li>
           <li class="info__item">
-            <img
-              src=""
-              alt="Телефон"
-              class="info__img"
-              width="186"
-              height="382"
-            />
-            <h3 class="info__title">Меняет мир вокруг</h3>
+            <div class="info__picture">
+              <img
+                src="src/img/info/screen-desktop-2.webp"
+                alt="Телефон"
+                class="info__img"
+                width="186"
+                height="382"
+              />
+            </div>
+            <h3 class="info__tagline">Меняет мир вокруг</h3>
             <p class="info__text">
               Сделайте снимок и украсьте его смайликом или текстовой подписью,
               чтобы усилить эффект
             </p>
           </li>
           <li class="info__item">
-            <img
-              src=""
-              alt="Телефон"
-              class="info__img"
-              width="186"
-              height="382"
-            />
-            <h3 class="info__title">Заводит новых друзей</h3>
-            <p class="info__text">
-              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
-              заводите новых
-            </p>
+            <div class="info__picture">
+              <picture>
+                <source
+                  srcset="src/img/info/screen-tablet.webp"
+                  media="(min-width: 660px)"
+                />
+                <source
+                  srcset="src/img/info/screen-desktop-3.webp"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="src/img/info/screen-mobile.webp"
+                  alt="Телефон"
+                  class="info__img"
+                  width="186"
+                  height="382"
+                />
+              </picture>
+            </div>
+            <div class="info__item-wrapper">
+              <h3 class="info__tagline">Заводит новых друзей</h3>
+              <p class="info__text">
+                Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+                заводите новых
+              </p>
+            </div>
           </li>
         </ul>
-        <section class="information">
-          <img
-            src=""
-            alt="24 часа"
-            class="information"
-            width="238"
-            height="276"
-          />
+        <section class="information container">
+          <div>
+            <span class="visually-hidden">24 часа</span>
+            <svg alt="24 часа" class="information" width="238" height="276">
+              <use href="src/icon/img.svg#24"></use>
+            </svg>
+          </div>
           <div class="information__wrapper">
             <h3 class="information__title">Эффект на 24 часа!</h3>
             <p class="information__text">
