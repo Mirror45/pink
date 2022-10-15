@@ -87,7 +87,7 @@ const end = () => {
 
 const live = () => {
   browserSync.init({
-    server: { baseDir: Key },
+    server: { baseDir: Key, index: "form.html" },
     notify: false,
     online: true,
   });
