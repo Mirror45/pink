@@ -18,7 +18,52 @@
   </head>
   <body class="page__body">
     <header class="main-header"></header>
-    <main class="page__main"></main>
+    <main class="page__main container">
+      <h1 class="visually-hidden">Конкурс на путешествие в Пинк</h1>
+      <p class="prize">
+        Поделитесь своей историей и получите шанс выиграть ценный приз — 1000
+        миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+      </p>
+      <form class="form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="form__platform platform">
+          <legend class="platform__title">
+            С каким приложением путешествовали?
+          </legend>
+          <ul class="platform__list">
+            <li class="platform__item">
+              <input
+                class="visually-hidden platform-input platform-input-radio"
+                type="radio"
+                name="platform-group"
+                value="Pink для iOS"
+                id="platform-iOS"
+              />
+              <label for="filter-iOS">Pink для iOS</label>
+            </li>
+            <li class="platform__item">
+              <input
+                class="visually-hidden platform-input platform-input-radio"
+                type="radio"
+                name="platform-group"
+                value="Pink на Android"
+                id="platform-Android"
+              />
+              <label for="filter-Android">Pink на Android</label>
+            </li>
+            <li class="platform__item">
+              <input
+                class="visually-hidden platform-input platform-input-radio"
+                type="radio"
+                name="platform-group"
+                value="Windows Phone"
+                id="platform-Windows"
+              />
+              <label for="filter-Windows">Windows Phone</label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </main>
     <footer class="main-footer"></footer>
     <script src="src/js/script.js"></script>
   </body>
