@@ -1,22 +1,27 @@
 .information {
   display: none;
-  margin-top: 54px;
-  margin-bottom: 109px;
 
-  @media (min-width: 660px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .container {
+    @media (min-width: 660px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 54px 20px 109px;
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 2fr;
+      column-gap: 71px;
+      padding: 17px 130px 67px;
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 
+  @media (min-width: 660px) {
+    display: block;
+  }
   @media (min-width: 1200px) {
-    grid-template-columns: 1fr 2fr;
-    column-gap: 71px;
-    margin: 0 auto;
-    padding-top: 17px;
-    padding-bottom: 67px;
     background-color: $basic-background;
-    font-size: 18px;
-    line-height: 30px;
   }
 }
 
