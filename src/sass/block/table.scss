@@ -1,4 +1,182 @@
 .table {
   background-color: $basic-background;
   clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 23px);
+
+  .container {
+    overflow: hidden;
+    padding: 105px 0 0;
+
+    @media (min-width: 660px) {
+      padding: 99px 20px 0;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 160px 130px 0;
+    }
+  }
+
+  @media (min-width: 660px) {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 41px);
+  }
+
+  @media (min-width: 1200px) {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 102px);
+  }
+}
+
+.table__table {
+  margin: 0 auto;
+  position: relative;
+  left: -255px;
+  border-bottom: 2px solid $basic-grey;
+  border-spacing: 0;
+
+  @media (min-width: 660px) {
+    left: 0;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
+
+.table__col {
+  min-width: 276px;
+  height: 59px;
+  padding: 0 20px;
+  border-top: 2px solid $basic-grey;
+  border-left: 2px solid $basic-grey;
+  background-color: $basic-white;
+  line-height: 30px;
+
+  &:first-child {
+    display: none;
+    white-space: nowrap;
+
+    @media (min-width: 660px) {
+      display: block;
+
+      .table__col-wrapper {
+        justify-content: start;
+      }
+    }
+  }
+
+  @media (min-width: 660px) {
+    min-width: 153px;
+    height: 45px;
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 233px;
+    height: 60px;
+  }
+}
+
+.table__th {
+  position: relative;
+  height: 94px;
+  border-top: 0;
+  background-color: $basic-dark;
+  color: $basic-white;
+  font-weight: 700;
+  font-size: 16px;
+  overflow: hidden;
+
+  .table__col-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--hit::before {
+    content: "хит";
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    width: 100px;
+    background-color: $basic-red;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: 660px) {
+    height: 75px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 95px;
+    font-size: 18px;
+  }
+}
+
+.table__col-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  @media (min-width: 660px) {
+    justify-content: center;
+  }
+}
+
+.table__price {
+  font-weight: 300;
+  font-size: 18px;
+
+  @media (min-width: 1200px) {
+    font-size: 24px;
+  }
+}
+
+.table__text {
+  text-transform: uppercase;
+
+  @media (min-width: 660px) {
+    display: none;
+  }
+}
+
+.table__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.table__toggle {
+  margin-right: 19px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $basic-dark;
+  opacity: 0.3;
+  cursor: pointer;
+
+  @media (min-width: 660px) {
+    display: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--current {
+    width: 9px;
+    height: 9px;
+    opacity: 1;
+    border: 3px solid $basic-dark;
+    background-color: transparent;
+  }
 }

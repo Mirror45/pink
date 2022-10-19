@@ -25,17 +25,18 @@
             <li class="main-nav__item main-nav__logo">
               <div class="container">
                 <a href="index.html" class="main-nav__logo-logo">
-                  <span class="visually-hidden">Pink</span>
-                  <svg width="74" height="23">
+                  <svg width="74" height="23" aria-label="Pink">
                     <use href="src/icon/img.svg#pink-mobile"></use>
                   </svg>
                 </a>
-                <div>
-                  <span class="visually-hidden">Переключатель</span>
-                  <svg width="23" height="23" class="main-nav__logo-toggle">
-                    <use href="src/icon/img.svg#burger"></use>
-                  </svg>
-                </div>
+                <svg
+                  width="23"
+                  height="23"
+                  class="main-nav__logo-toggle"
+                  aria-label="Переключатель"
+                >
+                  <use href="src/icon/img.svg#burger"></use>
+                </svg>
               </div>
             </li>
             <li class="main-nav__item">
@@ -63,24 +64,21 @@
               <ul class="promo__list">
                 <li class="promo__item">
                   <a href="">
-                    <span class="visually-hidden">Apple</span>
-                    <svg width="47" height="56">
+                    <svg width="47" height="56" aria-label="Apple">
                       <use href="src/icon/img.svg#apple-logo"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="promo__item">
                   <a href="">
-                    <span class="visually-hidden">Android</span>
-                    <svg width="43" height="47">
+                    <svg width="43" height="47" aria-label="Android">
                       <use href="src/icon/img.svg#android-logo"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="promo__item">
                   <a href="">
-                    <span class="visually-hidden">Microsoft</span>
-                    <svg width="44" height="41">
+                    <svg width="44" height="41" aria-label="Microsoft">
                       <use href="src/icon/img.svg#microsoft-logo"></use>
                     </svg>
                   </a>
@@ -173,17 +171,14 @@
 
       <section class="information">
         <div class="container">
-          <div>
-            <span class="visually-hidden">24 часа</span>
-            <svg
-              alt="24 часа"
-              class="information__img"
-              width="238"
-              height="276"
-            >
-              <use href="src/icon/img.svg#24"></use>
-            </svg>
-          </div>
+          <svg
+            aria-label="24 часа"
+            class="information__img"
+            width="238"
+            height="276"
+          >
+            <use href="src/icon/img.svg#24"></use>
+          </svg>
           <div class="information__wrapper">
             <h2 class="information__title">Эффект на 24 часа!</h2>
             <p class="information__text">
@@ -202,7 +197,12 @@
         <div class="container">
           <h2 class="visually-hidden">Цытаты</h2>
           <blockquote class="slider__blockquote">
-            <svg width="79" height="63" class="slider__quotes">
+            <svg
+              width="79"
+              height="63"
+              class="slider__quotes"
+              aria-label="quotes"
+            >
               <use href="src/icon/img.svg#quotes"></use>
             </svg>
             <p class="slider__decription">25 лет, водитель трамвая</p>
@@ -235,78 +235,188 @@
 
       <section class="table">
         <div class="container">
+          <h2 class="visually-hidden">Таблица товаров</h2>
           <table class="table__table">
-            <tr class="table__row">
-              <td class="table__col"></td>
-              <th class="table__col table__th">
-                База
-                <span class="table__price">1,99 USD</span>
-              </th>
-              <th class="table__col table__th table__th--hit">
-                Стандарт
-                <span class="table__price">3,99 USD</span>
-              </th>
-              <th class="table__col table__th">
-                Анлим
-                <span class="table__price">9,99 USD</span>
-              </th>
-            </tr>
-            <tr class="table__row">
-              <td class="table__col">Розовый фильтр</td>
-              <td class="table__col">
-                <svg width="31" height="21">
-                  <use href="src/icon/img.svg#yes"></use>
-                </svg>
-              </td>
-              <td class="table__col">
-                <svg width="31" height="21">
-                  <use href="src/icon/img.svg#yes"></use>
-                </svg>
-              </td>
-              <td class="table__col">
-                <svg width="31" height="21">
-                  <use href="src/icon/img.svg#yes"></use>
-                </svg>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__col">Смайлики</td>
-              <td class="table__col">
-                <svg width="27" height="27" class="table__close">
-                  <use href="src/icon/img.svg#close"></use>
-                </svg>
-              </td>
-              <td class="table__col">
-                <svg width="31" height="21">
-                  <use href="src/icon/img.svg#yes"></use>
-                </svg>
-              </td>
-              <td class="table__col">
-                <svg width="31" height="21">
-                  <use href="src/icon/img.svg#yes"></use>
-                </svg>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__col">Комментарии</td>
-              <td class="table__col">
-                <svg width="27" height="27" class="table__close">
-                  <use href="src/icon/img.svg#close"></use>
-                </svg>
-              </td>
-              <td class="table__col">
-                <svg width="27" height="27" class="table__close">
-                  <use href="src/icon/img.svg#close"></use>
-                </svg>
-              </td>
-              <td class="table__col">
-                <svg width="31" height="21">
-                  <use href="src/icon/img.svg#yes"></use>
-                </svg>
-              </td>
-            </tr>
+            <thead>
+              <tr class="table__row">
+                <th class="table__col visually-hidden"></th>
+                <th class="table__col table__th">
+                  <div class="table__col-wrapper">
+                    База
+                    <span class="table__price">1,99 USD</span>
+                  </div>
+                </th>
+                <th class="table__col table__th table__th--hit">
+                  <div class="table__col-wrapper">
+                    Стандарт
+                    <span class="table__price">3,99 USD</span>
+                  </div>
+                </th>
+                <th class="table__col table__th">
+                  <div class="table__col-wrapper">
+                    Анлим
+                    <span class="table__price">9,99 USD</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row">
+                <td class="table__col">
+                  <div class="table__col-wrapper">Розовый фильтр</div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Розовый фильтр</span>
+                    <svg width="31" height="21" aria-label="yes">
+                      <use href="src/icon/img.svg#yes"></use>
+                    </svg>
+                  </div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Розовый фильтр</span>
+                    <svg width="31" height="21" aria-label="yes">
+                      <use href="src/icon/img.svg#yes"></use>
+                    </svg>
+                  </div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Розовый фильтр</span>
+                    <svg width="31" height="21" aria-label="yes">
+                      <use href="src/icon/img.svg#yes"></use>
+                    </svg>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__col">
+                  <div class="table__col-wrapper">Смайлики</div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Смайлики</span>
+                    <svg
+                      width="27"
+                      height="27"
+                      style="color: #f25b26"
+                      aria-label="no"
+                    >
+                      <use href="src/icon/img.svg#close"></use>
+                    </svg>
+                  </div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Смайлики</span>
+                    <svg width="31" height="21" aria-label="yes">
+                      <use href="src/icon/img.svg#yes"></use>
+                    </svg>
+                  </div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Смайлики</span>
+                    <svg width="31" height="21" aria-label="yes">
+                      <use href="src/icon/img.svg#yes"></use>
+                    </svg>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__col">
+                  <div class="table__col-wrapper">Комментарии</div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Комментарии</span>
+                    <svg
+                      width="27"
+                      height="27"
+                      style="color: #f25b26"
+                      aria-label="no"
+                    >
+                      <use href="src/icon/img.svg#close"></use>
+                    </svg>
+                  </div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Комментарии</span>
+                    <svg
+                      width="27"
+                      height="27"
+                      style="color: #f25b26"
+                      aria-label="no"
+                    >
+                      <use href="src/icon/img.svg#close"></use>
+                    </svg>
+                  </div>
+                </td>
+                <td class="table__col">
+                  <div class="table__col-wrapper">
+                    <span class="table__text">Комментарии</span>
+                    <svg width="31" height="21" aria-label="yes">
+                      <use href="src/icon/img.svg#yes"></use>
+                    </svg>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
+          <div class="table__option">
+            <div class="table__toggle" tabindex="0">
+              <span class="visually-hidden">Переключатель</span>
+            </div>
+            <div class="table__toggle table__toggle--current" tabindex="0">
+              <span class="visually-hidden">Переключатель</span>
+            </div>
+            <div class="table__toggle" tabindex="0">
+              <span class="visually-hidden">Переключатель</span>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section class="map container">
+        <div class="container">
+          <h2 class="map__title">
+            Остались вопросы?<br />
+            Свяжитесь с нами!
+          </h2>
+          <ul class="map__list">
+            <li class="map__item">
+              <h3 class="map__tagline">Звоните:</h3>
+              <a href="tel:+78125556666" class="map__link">
+                +7 (812) 555-66-66
+              </a>
+            </li>
+            <li class="map__item">
+              <h3 class="map__tagline">Пишите:</h3>
+              <a href="mailto:mail@htmlacademy.ru" class="map__link">
+                mail@htmlacademy.ru
+              </a>
+            </li>
+            <li class="map__item">
+              <h3 class="map__tagline">Приезжайте в гости:</h3>
+              <a href="" class="map__link">
+                ул. Большая<br />
+                Конюшенная, 19/8
+              </a>
+            </li>
+          </ul>
+        </div>
+        <iframe
+          class="map__iframe container"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.619325303108!2d30.3211096160951!3d59.93845866907515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1666189449689!5m2!1sru!2sua"
+          width="320"
+          height="200"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Карта"
+        >
+        </iframe>
       </section>
     </main>
     <footer class="main-footer"></footer>
