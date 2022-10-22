@@ -48,15 +48,15 @@
     }
 
     .promo__title {
-      padding-top: 85px;
+      padding-top: 115px;
 
       @media (min-width: 660px) {
-        padding-top: 212px;
+        padding-top: 225px;
       }
-    }
 
-    .promo__button {
-      margin-top: 28px;
+      @media (min-width: 1200px) {
+        padding-top: 200px;
+      }
     }
   }
 }
@@ -164,6 +164,7 @@
 }
 
 .main-nav__link {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,6 +180,7 @@
     width: auto;
     padding: 0;
     font-weight: 400;
+    line-height: 18px;
 
     &:hover {
       color: $basic-red;
@@ -186,6 +188,15 @@
 
     &:active {
       opacity: 0.3;
+    }
+
+    &--current::before {
+      content: "";
+      position: absolute;
+      top: 80px;
+      height: 2px;
+      width: 100%;
+      background-color: $basic-white;
     }
   }
 }
@@ -217,7 +228,7 @@
   margin: 0;
   padding: 0;
   padding-top: 29px;
-  padding-bottom: 320px;
+  padding-bottom: 290px;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
@@ -225,13 +236,13 @@
   color: $basic-white;
 
   @media (min-width: 660px) {
-    padding-top: 102px;
+    padding-top: 140px;
     padding-bottom: 39px;
     font-size: 40px;
   }
 
   @media (min-width: 1200px) {
-    padding-top: 114px;
+    padding-top: 200px;
     padding-bottom: 51px;
     font-size: 50px;
   }
@@ -239,9 +250,11 @@
 
 .promo__button {
   width: 100%;
+  margin-top: 28px;
   margin-bottom: 32px;
 
   @media (min-width: 660px) {
+    margin-top: 0;
     margin-bottom: 46px;
   }
 
@@ -276,5 +289,39 @@
 
   @media (min-width: 1200px) {
     padding-top: 58px;
+    padding-bottom: 130px;
+  }
+}
+
+.page__form,
+.page__catalog {
+  .promo {
+    background-image: url(../img/page/back-mobile.webp);
+
+    @media (min-width: 660px) {
+      background-image: url(../img/page/back-tablet.webp);
+    }
+
+    @media (min-width: 1200px) {
+      background-image: url(../img/page/back-desktop.webp);
+    }
+  }
+
+  .promo__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-height: 240px;
+
+    @media (min-width: 660px) {
+      min-height: 440px;
+      font-size: 50px;
+      line-height: 68px;
+    }
+
+    @media (min-width: 1200px) {
+      min-height: 395px;
+    }
   }
 }
