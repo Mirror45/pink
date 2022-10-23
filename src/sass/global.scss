@@ -51,6 +51,7 @@ img {
 
 .button {
   display: inline-block;
+  min-width: 280px;
   padding: 10px 0;
   color: $basic-white;
   background-color: transparent;
@@ -81,7 +82,6 @@ img {
 
   &--sublime {
     height: 59px;
-    min-width: 296px;
     background-color: $basic-green;
     border: 2px solid transparent;
     border-radius: 1px;
@@ -97,7 +97,6 @@ img {
   }
 
   &--post {
-    min-width: 280px;
     height: 55px;
     color: $basic-red;
 
@@ -109,7 +108,6 @@ img {
   }
 
   &--cancel {
-    min-width: 280px;
     height: 55px;
     color: $basic-dark;
     opacity: 0.1;

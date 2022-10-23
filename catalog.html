@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="src/css/normalize.css" />
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
-  <body class="page__body page__form">
-    <!-- svg[width=""height=""]>use[href="src/icon/img.svg#name"] -->
+  <body class="page__body page__catalog">
+    <!-- svg[width=""height=""aria-label=""]>use[href="src/icon/img.svg#name"] -->
     <header class="main-header">
       <nav class="main-nav">
         <div class="main-nav__wrapper">
@@ -69,7 +69,105 @@
         </section>
       </nav>
     </header>
-    <main class="page__main"></main>
+    <main class="page__main">
+      <section class="photo-editing">
+        <h2 class="photo-editing__title container">
+          Затмите их всех!<br />
+          Выкладывайте все, что накопилось в телефоне!
+        </h2>
+        <div class="photo-editing__wrapper">
+          <div class="container">
+            <img
+              width="280"
+              height="374"
+              src="src/img/photo-editing/photo.webp"
+              srcset="src/img/photo-editing/photo@2x.webp 2x"
+              alt="Фото"
+              class="photo-editing__img"
+            />
+            <form class="photo-editing__form" method="post" action="">
+              <ul class="photo-editing__list">
+                <li class="photo-editing__item photo-editing__item--current">
+                  <svg
+                    class="photo-editing__icon"
+                    width="44"
+                    height="44"
+                    aria-label="Размер"
+                  >
+                    <use href="src/icon/img.svg#radius"></use>
+                  </svg>
+                  <div class="photo-editing__line">
+                    <div
+                      class="photo-editing__toggle"
+                      tabindex="0"
+                      style="left: 80%"
+                      id="photo-editing__radius"
+                    >
+                      <output class="visually-hidden" name="radius"></output>
+                      <span class="visually-hidden">Переключатель</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="photo-editing__item">
+                  <svg
+                    class="photo-editing__icon"
+                    width="48"
+                    height="43"
+                    aria-label="Насыщенность"
+                  >
+                    <use href="src/icon/img.svg#saturate"></use>
+                  </svg>
+                  <div class="photo-editing__line">
+                    <div
+                      class="photo-editing__toggle"
+                      tabindex="0"
+                      style="left: 20%"
+                      id="photo-editing__saturate"
+                    >
+                      <output class="visually-hidden" name="saturate"></output>
+                      <span class="visually-hidden">Переключатель</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="photo-editing__item">
+                  <svg
+                    class="photo-editing__icon"
+                    width="32"
+                    height="32"
+                    aria-label="Контраст"
+                  >
+                    <use href="src/icon/img.svg#contrast"></use>
+                  </svg>
+                  <div class="photo-editing__line">
+                    <div
+                      class="photo-editing__toggle"
+                      tabindex="0"
+                      style="left: 50%"
+                      id="photo-editing__contrast"
+                    >
+                      <output class="visually-hidden" name="contrast"></output>
+                      <span class="visually-hidden">Переключатель</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <button
+                class="photo-editing__button button button--post"
+                type="submit"
+              >
+                Запостить
+              </button>
+              <button
+                class="photo-editing__button button button--cancel"
+                type="reset"
+              >
+                Отмена
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper container">
         <a href="index.html" class="main-footer__logo">
