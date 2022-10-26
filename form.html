@@ -20,13 +20,140 @@
     <header class="main-header"></header>
     <main class="page__main container">
       <h1 class="visually-hidden">Конкурс на путешествие в Пинк</h1>
-      <p class="prize">
-        Поделитесь своей историей и получите шанс выиграть ценный приз — 1000
-        миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-      </p>
       <form class="form" method="get" action="https://echo.htmlacademy.ru">
+        <div class="prize">
+          <p>
+            Поделитесь своей историей и получите шанс выиграть ценный приз —
+            1000 миль на вашу бонусную карту!
+          </p>
+          <p>Пожалуйста, заполните форму ниже:</p>
+        </div>
+
+        <ul class="full-name__form full-name">
+          <li class="full-name__item">
+            <label class="label" for="surname">Фамилия:</label>
+            <input
+              class="input"
+              type="text"
+              name="surname"
+              id="surname"
+              placeholder="Укажите фамилию *"
+            />
+          </li>
+          <li class="full-name__item">
+            <label class="label" for="name">Имя:</label>
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваше имя *"
+            />
+          </li>
+          <li class="full-name__item">
+            <label class="label" for="patronymic">Отчество:</label>
+            <input
+              class="input"
+              type="text"
+              name="patronymic"
+              id="patronymic"
+              placeholder="Ну и отчество тоже"
+            />
+          </li>
+        </ul>
+
+        <fieldset class="form__achievements achievements">
+          <legend class="achievements__legend legend">
+            Ваши безбашенные <br />
+            достижения в путешествии
+          </legend>
+          <ul class="achievements__list">
+            <li class="filter-option">
+              <input
+                class="visually-hidden achievements-input achievements-input-checkbox"
+                type="checkbox"
+                name="selfie"
+                id="achievements-selfie"
+                checked
+              />
+              <label for="achievements-selfie">Сделал селфи с акулой</label>
+            </li>
+            <li class="filter-option">
+              <input
+                class="visually-hidden achievements-input achievements-input-checkbox"
+                type="checkbox"
+                name="burnt"
+                id="achievements-burnt"
+                checked
+              />
+              <label for="achievements-burnt">Обгорел на пляже</label>
+            </li>
+            <li class="filter-option">
+              <input
+                class="visually-hidden achievements-input achievements-input-checkbox"
+                type="checkbox"
+                name="Chuck-Norris"
+                id="achievements-Chuck-Norris"
+              />
+              <label for="achievements-Chuck-Norris">Видел Чака Норриса</label>
+            </li>
+            <li class="filter-option">
+              <input
+                class="visually-hidden achievements-input achievements-input-checkbox"
+                type="checkbox"
+                name="souvenirs"
+                id="achievements-souvenirs"
+              />
+              <label for="achievements-souvenirs">Накупил сувениров</label>
+            </li>
+            <li class="filter-option">
+              <input
+                class="visually-hidden achievements-input achievements-input-checkbox"
+                type="checkbox"
+                name="held-the-tower"
+                id="achievements-tower"
+                checked
+              />
+              <label for="achievements-tower">Удержал башню</label>
+            </li>
+            <li class="filter-option">
+              <input
+                class="visually-hidden achievements-input achievements-input-checkbox"
+                type="checkbox"
+                name="smashed-the-hotel"
+                id="achievements-hotel"
+              />
+              <label for="achievements-hotel">Разгромил отель</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__information information">
+          <legend class="legend">Контактная информация</legend>
+          <div class="information__item">
+            <label class="label" for="phone-number">НОМЕР ТЕЛЕФОНА</label>
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="phone-number"
+              placeholder="Номер, пожалуйста"
+            />
+          </div>
+          <div class="information__item">
+            <label class="label" for="phone-number">АДРЕС ПОЧТЫ</label>
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="phone-number"
+              placeholder="Введите почту *"
+            />
+          </div>
+        </fieldset>
+
         <fieldset class="form__platform platform">
-          <legend class="platform__title">
+          <legend class="platform__legend legend">
             С каким приложением путешествовали?
           </legend>
           <ul class="platform__list">
@@ -37,8 +164,9 @@
                 name="platform-group"
                 value="Pink для iOS"
                 id="platform-iOS"
+                checked
               />
-              <label for="filter-iOS">Pink для iOS</label>
+              <label for="platform-iOS">Pink для iOS</label>
             </li>
             <li class="platform__item">
               <input
@@ -48,7 +176,7 @@
                 value="Pink на Android"
                 id="platform-Android"
               />
-              <label for="filter-Android">Pink на Android</label>
+              <label for="platform-Android">Pink на Android</label>
             </li>
             <li class="platform__item">
               <input
@@ -58,10 +186,25 @@
                 value="Windows Phone"
                 id="platform-Windows"
               />
-              <label for="filter-Windows">Windows Phone</label>
+              <label for="platform-Windows">Windows Phone</label>
             </li>
           </ul>
         </fieldset>
+
+        <fieldset class="form__comment comment">
+          <legend class="comment__legend legend">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
+          <textarea
+            class="comment__input input"
+            type="text"
+            placeholder="Можно прям в красках, не стесняясь в выражениях"
+          ></textarea>
+        </fieldset>
+
+        <button class="form__button">Отправить форму</button>
+        <p class="form__required required">
+          <span class="required__span">*</span>— обязательные
+          <span class="required__span-none">для заполнения</span> поля
+        </p>
       </form>
     </main>
     <footer class="main-footer"></footer>
