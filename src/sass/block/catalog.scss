@@ -19,9 +19,11 @@
 }
 
 .users-news__item {
+  display: grid;
   background-color: #f2f2f2;
 
   .users-news__wrapper {
+    align-self: end;
     padding: 10px 31px 25px 17px;
 
     @media (min-width: 660px) {
