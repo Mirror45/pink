@@ -79,11 +79,28 @@
         <div class="container">
           <ul class="users-news__list">
             <li class="users-news__item">
-              <img
-                src="/src/img/catalog/panorama/photo-1-mobile.jpg"
-                width="280"
-                alt="Фото"
-              />
+              <picture>
+                <source
+                  srcset="
+                    src/img/info/screen-tablet.webp    1x,
+                    src/img/info/screen-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 660px)"
+                />
+                <source
+                  srcset="
+                    src/img/info/screen-desktop-3.webp    1x,
+                    src/img/info/screen-desktop-3@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="/src/img/catalog/panorama/photo-1-mobile.jpg"
+                  width="280"
+                  alt="Фото"
+                  class="users-news__img"
+                />
+              </picture>
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
                   Левон<time>(5 часов назад)</time>
@@ -93,12 +110,14 @@
                 </p>
                 <div class="wrapper__like">
                   <p class="like__counter">Нравится: 356</p>
-                  <img
-                    src="/src/img/catalog/panorama/heart.svg"
+                  <svg
                     width="13"
                     height="12"
-                    alt="icon: like"
-                  />
+                    aria-label="Like"
+                    class="users-news__heart"
+                  >
+                    <use href="src/icon/img.svg#heart"></use>
+                  </svg>
                 </div>
               </div>
             </li>
@@ -107,6 +126,7 @@
                 src="/src/img/catalog/panorama/photo-2-mobile.jpg"
                 width="280"
                 alt="Фото"
+                class="users-news__img"
               />
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
@@ -115,12 +135,14 @@
                 <p class="users-news__user-comment">Соседи будут рады!</p>
                 <div class="wrapper__like">
                   <p class="like__counter">Нравится: 666</p>
-                  <img
-                    src="/src/img/catalog/panorama/heart.svg"
+                  <svg
                     width="13"
                     height="12"
-                    alt="icon: like"
-                  />
+                    aria-label="Like"
+                    class="users-news__heart"
+                  >
+                    <use href="src/icon/img.svg#heart"></use>
+                  </svg>
                 </div>
               </div>
             </li>
@@ -129,6 +151,7 @@
                 src="/src/img/catalog/panorama/photo-3-mobile.jpg"
                 width="280"
                 alt="Фото"
+                class="users-news__img"
               />
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
@@ -139,12 +162,14 @@
                 </p>
                 <div class="wrapper__like">
                   <p class="like__counter">Нравится: 215</p>
-                  <img
-                    src="/src/img/catalog/panorama/heart.svg"
+                  <svg
                     width="13"
                     height="12"
-                    alt="icon: like"
-                  />
+                    aria-label="Like"
+                    class="users-news__heart"
+                  >
+                    <use href="src/icon/img.svg#heart"></use>
+                  </svg>
                 </div>
               </div>
             </li>
@@ -153,6 +178,7 @@
                 src="/src/img/catalog/panorama/photo-4-mobile.jpg"
                 width="280"
                 alt="Фото"
+                class="users-news__img"
               />
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
@@ -161,12 +187,14 @@
                 <p class="users-news__user-comment">Самая кубанская в мире!</p>
                 <div class="wrapper__like">
                   <p class="like__counter">Нравится: 4</p>
-                  <img
-                    src="/src/img/catalog/panorama/heart.svg"
+                  <svg
                     width="13"
                     height="12"
-                    alt="icon: like"
-                  />
+                    aria-label="Like"
+                    class="users-news__heart"
+                  >
+                    <use href="src/icon/img.svg#heart"></use>
+                  </svg>
                 </div>
               </div>
             </li>
@@ -175,6 +203,7 @@
                 src="/src/img/catalog/panorama/photo-5-mobile.jpg"
                 width="280"
                 alt="Фото"
+                class="users-news__img"
               />
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
@@ -183,12 +212,14 @@
                 <p class="users-news__user-comment">Где снег-то?</p>
                 <div class="wrapper__like">
                   <p class="like__counter">Нравится: 150</p>
-                  <img
-                    src="/src/img/catalog/panorama/heart.svg"
+                  <svg
                     width="13"
                     height="12"
-                    alt="icon: like"
-                  />
+                    aria-label="Like"
+                    class="users-news__heart"
+                  >
+                    <use href="src/icon/img.svg#heart"></use>
+                  </svg>
                 </div>
               </div>
             </li>
@@ -197,6 +228,7 @@
                 src="/src/img/catalog/panorama/photo-6-mobile.jpg"
                 width="280"
                 alt="Фото"
+                class="users-news__img"
               />
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
@@ -207,12 +239,14 @@
                 </p>
                 <div class="wrapper__like">
                   <p class="like__counter">Нравится: 2560</p>
-                  <img
-                    src="/src/img/catalog/panorama/heart.svg"
+                  <svg
                     width="13"
                     height="12"
-                    alt="icon: like"
-                  />
+                    aria-label="Like"
+                    class="users-news__heart"
+                  >
+                    <use href="src/icon/img.svg#heart"></use>
+                  </svg>
                 </div>
               </div>
             </li>
@@ -225,96 +259,94 @@
           Затмите их всех!<br />
           Выкладывайте все, что накопилось в телефоне!
         </h2>
-        <div class="photo-editing__wrapper">
-          <div class="container">
-            <img
-              width="280"
-              height="374"
-              src="src/img/photo-editing/photo.webp"
-              srcset="src/img/photo-editing/photo@2x.webp 2x"
-              alt="Фото"
-              class="photo-editing__img"
-            />
-            <form class="photo-editing__form" method="post" action="">
-              <ul class="photo-editing__list">
-                <li class="photo-editing__item photo-editing__item--current">
-                  <svg
-                    class="photo-editing__icon"
-                    width="44"
-                    height="44"
-                    aria-label="Размер"
+        <div class="photo-editing__wrapper container">
+          <img
+            width="280"
+            height="374"
+            src="src/img/photo-editing/photo.webp"
+            srcset="src/img/photo-editing/photo@2x.webp 2x"
+            alt="Фото"
+            class="photo-editing__img"
+          />
+          <form class="photo-editing__form" method="post" action="">
+            <ul class="photo-editing__list">
+              <li class="photo-editing__item photo-editing__item--current">
+                <svg
+                  class="photo-editing__icon"
+                  width="44"
+                  height="44"
+                  aria-label="Размер"
+                >
+                  <use href="src/icon/img.svg#radius"></use>
+                </svg>
+                <div class="photo-editing__line">
+                  <div
+                    class="photo-editing__toggle"
+                    tabindex="0"
+                    style="left: 80%"
+                    id="photo-editing__radius"
                   >
-                    <use href="src/icon/img.svg#radius"></use>
-                  </svg>
-                  <div class="photo-editing__line">
-                    <div
-                      class="photo-editing__toggle"
-                      tabindex="0"
-                      style="left: 80%"
-                      id="photo-editing__radius"
-                    >
-                      <output class="visually-hidden" name="radius"></output>
-                      <span class="visually-hidden">Переключатель</span>
-                    </div>
+                    <output class="visually-hidden" name="radius"></output>
+                    <span class="visually-hidden">Переключатель</span>
                   </div>
-                </li>
-                <li class="photo-editing__item">
-                  <svg
-                    class="photo-editing__icon"
-                    width="48"
-                    height="43"
-                    aria-label="Насыщенность"
+                </div>
+              </li>
+              <li class="photo-editing__item">
+                <svg
+                  class="photo-editing__icon"
+                  width="48"
+                  height="43"
+                  aria-label="Насыщенность"
+                >
+                  <use href="src/icon/img.svg#saturate"></use>
+                </svg>
+                <div class="photo-editing__line">
+                  <div
+                    class="photo-editing__toggle"
+                    tabindex="0"
+                    style="left: 20%"
+                    id="photo-editing__saturate"
                   >
-                    <use href="src/icon/img.svg#saturate"></use>
-                  </svg>
-                  <div class="photo-editing__line">
-                    <div
-                      class="photo-editing__toggle"
-                      tabindex="0"
-                      style="left: 20%"
-                      id="photo-editing__saturate"
-                    >
-                      <output class="visually-hidden" name="saturate"></output>
-                      <span class="visually-hidden">Переключатель</span>
-                    </div>
+                    <output class="visually-hidden" name="saturate"></output>
+                    <span class="visually-hidden">Переключатель</span>
                   </div>
-                </li>
-                <li class="photo-editing__item">
-                  <svg
-                    class="photo-editing__icon"
-                    width="32"
-                    height="32"
-                    aria-label="Контраст"
+                </div>
+              </li>
+              <li class="photo-editing__item">
+                <svg
+                  class="photo-editing__icon"
+                  width="32"
+                  height="32"
+                  aria-label="Контраст"
+                >
+                  <use href="src/icon/img.svg#contrast"></use>
+                </svg>
+                <div class="photo-editing__line">
+                  <div
+                    class="photo-editing__toggle"
+                    tabindex="0"
+                    style="left: 50%"
+                    id="photo-editing__contrast"
                   >
-                    <use href="src/icon/img.svg#contrast"></use>
-                  </svg>
-                  <div class="photo-editing__line">
-                    <div
-                      class="photo-editing__toggle"
-                      tabindex="0"
-                      style="left: 50%"
-                      id="photo-editing__contrast"
-                    >
-                      <output class="visually-hidden" name="contrast"></output>
-                      <span class="visually-hidden">Переключатель</span>
-                    </div>
+                    <output class="visually-hidden" name="contrast"></output>
+                    <span class="visually-hidden">Переключатель</span>
                   </div>
-                </li>
-              </ul>
-              <button
-                class="photo-editing__button button button--post"
-                type="submit"
-              >
-                Запостить
-              </button>
-              <button
-                class="photo-editing__button button button--cancel"
-                type="reset"
-              >
-                Отмена
-              </button>
-            </form>
-          </div>
+                </div>
+              </li>
+            </ul>
+            <button
+              class="photo-editing__button button button--post"
+              type="submit"
+            >
+              Запостить
+            </button>
+            <button
+              class="photo-editing__button button button--cancel"
+              type="reset"
+            >
+              Отмена
+            </button>
+          </form>
         </div>
       </section>
     </main>

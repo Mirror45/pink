@@ -24,19 +24,14 @@
   background-color: $basic-background;
 
   @media (min-width: 660px) {
+    display: flex;
+    justify-content: space-between;
     padding-top: 57px;
     padding-bottom: 57px;
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-    }
   }
 
   @media (min-width: 1200px) {
-    .container {
-      justify-content: space-around;
-    }
+    justify-content: space-around;
   }
 }
 
