@@ -73,8 +73,59 @@
       <h1 class="visually-hidden">Фотографии пользователей</h1>
 
       <section class="users-news">
+        <h2 class="users-news__title container">
+          Взгляните на фотографии, которые выкладывают пользователи!<br />
+          Видите, как не хватает ваших?
+        </h2>
         <div class="panorama">
-          <img src="" alt="" />
+          <picture class="panorama__picture">
+            <source
+              srcset="
+                src/img/catalog/panorama/panorama-desktop.webp    1x,
+                src/img/catalog/panorama/panorama-desktop@2x.webp 2x
+              "
+              media="(min-width: 660px)"
+            />
+            <source
+              srcset="
+                src/img/catalog/panorama/panorama-tablet.webp    1x,
+                src/img/catalog/panorama/panorama-tablet@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+            />
+            <img
+              src="src/img/catalog/panorama/panorama-mobile.webp"
+              srcset="src/img/catalog/panorama/panorama-mobile@2x.webp 2x"
+              width="280"
+              alt="Фото"
+              class="panorama__img container"
+            />
+          </picture>
+          <div class="panorama__label container">
+            <span class="panorama__text">Панорама дня</span>
+          </div>
+          <div class="container">
+            <div class="users-news__wrapper">
+              <p class="users-news__user-name">
+                Анна<time>(5 минут назад)</time>
+              </p>
+              <p class="users-news__user-comment">
+                Прыгать или нет? Напишите в комментарии свой совет и смотрите
+                прямую трансляцию в перископе, задавайте свои вопросы!
+              </p>
+              <div class="wrapper__like">
+                <p class="like__counter">Нравится: 215</p>
+                <svg
+                  width="13"
+                  height="12"
+                  aria-label="Like"
+                  class="users-news__heart"
+                >
+                  <use href="src/icon/img.svg#heart"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="container">
           <ul class="users-news__list">
@@ -82,20 +133,21 @@
               <picture>
                 <source
                   srcset="
-                    src/img/info/screen-tablet.webp    1x,
-                    src/img/info/screen-tablet@2x.webp 2x
+                    src/img/catalog/photo-1-desktop.webp    1x,
+                    src/img/catalog/photo-1-desktop@2x.webp 2x
                   "
                   media="(min-width: 660px)"
                 />
                 <source
                   srcset="
-                    src/img/info/screen-desktop-3.webp    1x,
-                    src/img/info/screen-desktop-3@2x.webp 2x
+                    src/img/catalog/photo-1-tablet.webp         1x,
+                    src/img/catalog/photo-1-tablet.webp@2x.webp 2x
                   "
                   media="(min-width: 1200px)"
                 />
                 <img
-                  src="/src/img/catalog/panorama/photo-1-mobile.jpg"
+                  src="src/img/catalog/photo-1-mobile.webp"
+                  srcset="src/img/catalog/photo-1-mobile@2x.webp 2x"
                   width="280"
                   alt="Фото"
                   class="users-news__img"
@@ -122,12 +174,29 @@
               </div>
             </li>
             <li class="users-news__item">
-              <img
-                src="/src/img/catalog/panorama/photo-2-mobile.jpg"
-                width="280"
-                alt="Фото"
-                class="users-news__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    src/img/catalog/photo-2-desktop.webp    1x,
+                    src/img/catalog/photo-2-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 660px)"
+                />
+                <source
+                  srcset="
+                    src/img/catalog/photo-2-tablet.webp         1x,
+                    src/img/catalog/photo-2-tablet.webp@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="src/img/catalog/photo-2-mobile.webp"
+                  srcset="src/img/catalog/photo-2-mobile@2x.webp 2x"
+                  width="280"
+                  alt="Фото"
+                  class="users-news__img"
+                />
+              </picture>
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
                   Антон<time>(12 часов назад)</time>
@@ -147,12 +216,29 @@
               </div>
             </li>
             <li class="users-news__item">
-              <img
-                src="/src/img/catalog/panorama/photo-3-mobile.jpg"
-                width="280"
-                alt="Фото"
-                class="users-news__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    src/img/catalog/photo-3-desktop.webp    1x,
+                    src/img/catalog/photo-3-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 660px)"
+                />
+                <source
+                  srcset="
+                    src/img/catalog/photo-3-tablet.webp         1x,
+                    src/img/catalog/photo-3-tablet.webp@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="src/img/catalog/photo-3-mobile.webp"
+                  srcset="src/img/catalog/photo-3-mobile@2x.webp 2x"
+                  width="280"
+                  alt="Фото"
+                  class="users-news__img"
+                />
+              </picture>
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
                   Борис<time>(20 часов назад)</time>
@@ -174,12 +260,29 @@
               </div>
             </li>
             <li class="users-news__item">
-              <img
-                src="/src/img/catalog/panorama/photo-4-mobile.jpg"
-                width="280"
-                alt="Фото"
-                class="users-news__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    src/img/catalog/photo-4-desktop.webp    1x,
+                    src/img/catalog/photo-4-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 660px)"
+                />
+                <source
+                  srcset="
+                    src/img/catalog/photo-4-tablet.webp         1x,
+                    src/img/catalog/photo-4-tablet.webp@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="src/img/catalog/photo-4-mobile.webp"
+                  srcset="src/img/catalog/photo-4-mobile@2x.webp 2x"
+                  width="280"
+                  alt="Фото"
+                  class="users-news__img"
+                />
+              </picture>
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
                   Сергей<time>(25 часов назад)</time>
@@ -199,12 +302,29 @@
               </div>
             </li>
             <li class="users-news__item">
-              <img
-                src="/src/img/catalog/panorama/photo-5-mobile.jpg"
-                width="280"
-                alt="Фото"
-                class="users-news__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    src/img/catalog/photo-5-desktop.webp    1x,
+                    src/img/catalog/photo-5-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 660px)"
+                />
+                <source
+                  srcset="
+                    src/img/catalog/photo-5-tablet.webp         1x,
+                    src/img/catalog/photo-5-tablet.webp@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="src/img/catalog/photo-5-mobile.webp"
+                  srcset="src/img/catalog/photo-5-mobile@2x.webp 2x"
+                  width="280"
+                  alt="Фото"
+                  class="users-news__img"
+                />
+              </picture>
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
                   Максим<time>(40 часов назад)</time>
@@ -224,12 +344,29 @@
               </div>
             </li>
             <li class="users-news__item">
-              <img
-                src="/src/img/catalog/panorama/photo-6-mobile.jpg"
-                width="280"
-                alt="Фото"
-                class="users-news__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    src/img/catalog/photo-6-desktop.webp    1x,
+                    src/img/catalog/photo-6-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 660px)"
+                />
+                <source
+                  srcset="
+                    src/img/catalog/photo-6-tablet.webp         1x,
+                    src/img/catalog/photo-6-tablet.webp@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="src/img/catalog/photo-6-mobile.webp"
+                  srcset="src/img/catalog/photo-6-mobile@2x.webp 2x"
+                  width="280"
+                  alt="Фото"
+                  class="users-news__img"
+                />
+              </picture>
               <div class="users-news__wrapper">
                 <p class="users-news__user-name">
                   Надежда<time>(45 часов назад)</time>
